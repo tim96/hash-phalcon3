@@ -6,7 +6,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>HashCode</title>
+    <title>{% block title %}HashCode{% endblock %}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <meta name="description" content="Move project from silex 2 to symfony 4">
@@ -56,7 +56,9 @@
 </div>
 
 <div class="container" style="padding-top: 10px;">
-    <?php echo $this->getContent(); ?>
+    {% block content %}
+        {{ content() }}
+    {% endblock %}
 </div>
 
 <script src="//code.jquery.com/jquery-1.12.1.min.js"></script>
